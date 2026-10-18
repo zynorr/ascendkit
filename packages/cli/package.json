@@ -1,0 +1,26 @@
+{
+  "name": "@ascendkit/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "AscendKit CLI (ak / ascendkit): inspect pools, fees and quotes on the Ascend launchpad",
+  "license": "MIT",
+  "bin": {
+    "ak": "./dist/bin.js",
+    "ascendkit": "./dist/bin.js"
+  },
+  "main": "./dist/bin.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@ascendkit/core": "*",
+    "@ascendkit/indexer": "*",
+    "@ascendkit/sim": "*",
+    "commander": "^13.0.0",
+    "viem": "^2.21.0"
+  }
+}
