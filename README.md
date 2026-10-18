@@ -37,13 +37,16 @@ AscendKit is that work, done once, in TypeScript, with proof.
 
 ## Status
 
+**Submitted scope: M1–M3 — complete and verifiable end to end.** M4 and M5 continue in
+the grant phase.
+
 | Milestone | State |
 |---|---|
 | **M1** — ABI parity harness: vendored sources, byte-identical rebuild, topic/selector/`CREATE2` verification | ✅ done |
 | **M2** — SDK CREATE2 prediction, typed decoders, pool list/history/snapshots, verified fee splits, `pools`/`decode`/`watch` CLI | ✅ done |
 | **M3** — Fill simulator: both real `Filled` events replay to the wei; fee-aware `ak quote` | ✅ done |
-| **M4** — Telegram bot: guided launch wizard + pool watcher | 🚧 next |
-| **M5** — docs site, npm publish, demo video, submission | ⏳ |
+| **M4** — Telegram bot: guided launch wizard + pool watcher | ⏳ grant phase |
+| **M5** — docs site, npm publish of `@ascendkit/*` | ⏳ grant phase |
 
 ## Quickstart
 
@@ -115,9 +118,9 @@ ak launch|crank|bid          planned — see roadmap (M4)
 
 ## Telegram bot
 
-`apps/bot` — grammY scaffold wired to the same packages: pool watcher and a launch
-wizard where the **creator is a role, not the caller** (the launchpad supports
-launch-on-behalf). Builds in CI; demo needs a funded testnet wallet.
+`apps/bot` — grammY scaffold wired to the same packages. The pool watcher and the launch
+wizard (the **creator is a role, not the caller** — the launchpad supports
+launch-on-behalf) land in the grant phase. Builds in CI today.
 
 ## Architecture
 
@@ -137,9 +140,9 @@ fixtures/         raw logs + decoded pools + launch tx, frozen with provenance
   band + EMA + clip rules ported to exact integer math, both real `Filled` events
   replayed to the wei, and `ak quote` live. This is the moat: nobody else can
   simulate a fill without the exact math above.
-- **M4** — Telegram bot: guided launch wizard (creator role, salt preview with predicted
-  token address, dev-buy) and a pool watcher with formatted event cards.
-- **M5** — Docs site, npm publish of `@ascendkit/*`, demo video, competition submission.
+- **M4 (grant phase)** — Telegram bot: guided launch wizard (creator role, salt preview
+  with predicted token address, dev-buy) and a pool watcher with formatted event cards.
+- **M5 (grant phase)** — Docs site and npm publish of `@ascendkit/*`.
 - **M6** — Hosted read API + webhooks on top of the indexer: subscribe to
   `Launched`/`Collected`/`Filled` with no infra to run.
 - **M7** — Generic hook indexer core: track any v4 launchpad hook with a dynamic-fee
