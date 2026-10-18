@@ -1,0 +1,19 @@
+{
+  "name": "@ascendkit/abi-extract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproducible ABI extraction: compile the vendored verified sources with solc 0.8.30",
+  "license": "MIT",
+  "scripts": {
+    "vendor": "node vendor.js",
+    "extract": "node extract.js",
+    "verify": "node verify.js"
+  },
+  "dependencies": {
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "solc": "0.8.30"
+  }
+}
