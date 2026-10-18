@@ -18,7 +18,7 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "test": "vitest run",
     "cli": "node packages/cli/dist/bin.js",
-    "verify": "node tools/abi-extract/verify.js",
+    "verify": "node tools/abi-extract/extract.js && node tools/abi-extract/verify.js",
     "demo": "node examples/01-predict-pool.mjs && node examples/02-track-pool.mjs && node examples/04-simulate-fill.mjs"
   },
   "devDependencies": {

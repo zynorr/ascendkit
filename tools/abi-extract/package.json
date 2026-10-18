@@ -8,7 +8,7 @@
   "scripts": {
     "vendor": "node vendor.js",
     "extract": "node extract.js",
-    "verify": "node verify.js"
+    "verify": "node extract.js && node verify.js"
   },
   "dependencies": {
     "viem": "^2.21.0"

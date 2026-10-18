@@ -23,7 +23,7 @@ AscendKit is that work, done once, in TypeScript, with proof.
 
 | Claim | How it's proven | Where |
 |---|---|---|
-| Byte-identical rebuild of the deployed contracts | The 62 verified sources (vendored from the explorer) compile with solc 0.8.30 to bytecode that matches the live `AscendLaunchpad` and `AscendToken`s, immutables masked | `tools/abi-extract/verify.js` — 10/10 checks |
+| Byte-identical rebuild of the deployed contracts | The 62 verified sources (vendored from the explorer) compile with solc 0.8.30 to bytecode that matches the live `AscendLaunchpad` and `AscendToken`s, immutables masked | `npm run verify` — 10/10 checks |
 | Every event topic decodes | 62 committed raw logs across 11 event types, decoded by the typed indexer | `packages/indexer/src/decode.test.ts` |
 | poolId is derivable offline | `keccak256(abi.encode(...))` reproduces all 8 live poolIds | `packages/core/src/poolkey.test.ts` |
 | Token addresses are predictable before launch | CREATE2 prediction reproduces a real `launch()` tx exactly | `packages/core/src/create2.test.ts` |
@@ -51,6 +51,7 @@ AscendKit is that work, done once, in TypeScript, with proof.
 npm install
 npm run build
 npm test                 # 59 tests, no network needed
+npm run verify           # recompile the 62 sources, then 10/10 byte-identity checks
 npm run demo             # offline CREATE2 prediction + live pool tracking + fill replay
 npm run cli -- pools     # 8 real pools on Elysium testnet
 ```

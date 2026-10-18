@@ -17,8 +17,8 @@ Record from the repo root after `npm install && npm run build`.
    AscendKit is that layer.
 
 2. **Proof, not promises (60s)**
-   - `node tools/abi-extract/verify.js` → 10/10 checks: our solc 0.8.30 rebuild of the 62
-     verified sources is byte-identical to the deployed contracts; every topic matches
+   - `npm run verify` → recompiles the 62 vendored sources with solc 0.8.30, then 10/10
+     checks: the rebuild is byte-identical to the deployed contracts; every topic matches
      every committed log; CREATE2 reproduces a real launch.
    - `npm test` → 59/59, including the fee-split model that matches all 19 live
      `ProtocolFeesAllocated` events to the wei and the fill replay below.
