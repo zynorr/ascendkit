@@ -1,0 +1,25 @@
+{
+  "name": "@ascendkit/core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Chain, addresses, protocol constants, ABI and pool-key derivation for the Ascend launchpad",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "viem": "^2.21.0"
+  }
+}
