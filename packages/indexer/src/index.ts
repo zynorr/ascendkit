@@ -1,5 +1,10 @@
 import { decodeEventLog, toHex, type Address, type Hex, type PublicClient } from 'viem'
-import { ADDRESSES, launchpadAbi, launchpadEventTopics } from '@ascendkit/core'
+import {
+  ADDRESSES,
+  launchpadAbi,
+  launchpadEventTopics,
+  poolManagerAbi
+} from '@ascendkit/core'
 
 export interface EventMeta {
   blockNumber: bigint
@@ -324,12 +329,19 @@ export interface PoolSnapshot {
   emaUpdatedAt: number
 }
 
+export interface SnapshotPoolOptions {
+  launchpad?: Address
+  /** Pin the multicall to this block (archive reads; used by the fill replay). */
+  blockNumber?: bigint
+}
+
 /** One multicall snapshot of a pool's launchpad-side state. */
 export async function snapshotPool(
   client: PublicClient,
   poolId: Hex,
-  launchpad: Address = ADDRESSES.ascendLaunchpad
+  opts: SnapshotPoolOptions = {}
 ): Promise<PoolSnapshot> {
+  const launchpad = opts.launchpad ?? ADDRESSES.ascendLaunchpad
   const [
     launchedAt,
     creator,
@@ -342,6 +354,7 @@ export async function snapshotPool(
     emaUpdatedAt
   ] = await client.multicall({
     allowFailure: false,
+    blockNumber: opts.blockNumber,
     contracts: [
       { address: launchpad, abi: launchpadAbi, functionName: 'poolLaunchedAt', args: [poolId] },
       { address: launchpad, abi: launchpadAbi, functionName: 'poolCreator', args: [poolId] },
@@ -367,5 +380,38 @@ export async function snapshotPool(
     bidInventory: bidInventory as bigint,
     emaSqrtPrice: emaSqrtPrice as bigint,
     emaUpdatedAt: Number(emaUpdatedAt)
+  }
+}
+
+export interface PoolSpot {
+  sqrtPriceX96: bigint
+  tick: number
+  protocolFee: number
+  lpFee: number
+}
+
+export interface PoolSpotOptions {
+  blockNumber?: bigint
+  poolManager?: Address
+}
+
+/** The CL pool's slot0 (spot price the next swap starts from). */
+export async function poolSpot(
+  client: PublicClient,
+  poolId: Hex,
+  opts: PoolSpotOptions = {}
+): Promise<PoolSpot> {
+  const [sqrtPriceX96, tick, protocolFee, lpFee] = await client.readContract({
+    address: opts.poolManager ?? ADDRESSES.infinityPoolManager,
+    abi: poolManagerAbi,
+    functionName: 'getSlot0',
+    args: [poolId],
+    blockNumber: opts.blockNumber
+  })
+  return {
+    sqrtPriceX96,
+    tick: Number(tick),
+    protocolFee: Number(protocolFee),
+    lpFee: Number(lpFee)
   }
 }
