@@ -1,0 +1,29 @@
+{
+  "name": "ascendkit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript toolkit for the Ascend launchpad on Elysium testnet: SDK, simulator, indexer, CLI and Telegram bot",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @ascendkit/core && npm run build -w @ascendkit/sim && npm run build -w @ascendkit/indexer && npm run build -w @ascendkit/cli && npm run build -w @ascendkit/bot",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "cli": "node packages/cli/dist/bin.js",
+    "verify": "node tools/abi-extract/verify.js",
+    "demo": "node examples/01-predict-pool.mjs && node examples/02-track-pool.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
