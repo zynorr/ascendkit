@@ -14,6 +14,7 @@ export {
   TOTAL_SUPPLY
 } from './constants.js'
 export { launchpadAbi, launchpadEventTopics } from './abis/launchpad.js'
+export { poolManagerAbi } from './abis/pool-manager.js'
 export {
   poolKeyOf,
   poolIdOf,
@@ -22,3 +23,11 @@ export {
   type PoolKeyContext
 } from './poolkey.js'
 export { predictTokenAddress, type PredictTokenAddressArgs } from './create2.js'
+export {
+  getSqrtPriceAtTick,
+  MAX_SQRT_RATIO,
+  MAX_TICK,
+  MIN_SQRT_RATIO,
+  MIN_TICK
+} from './tick.js'
+export { curveBoundsOf, curveTopOf, type CurveStep } from './curve.js'
