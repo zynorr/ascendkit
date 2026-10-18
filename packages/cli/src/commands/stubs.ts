@@ -1,7 +1,6 @@
 import { Command } from 'commander'
 
 const STUBS = [
-  { signature: 'quote <token> [amount]', desc: 'fee-aware quote with fill simulation', milestone: 'M3' },
   { signature: 'launch', desc: 'guided launch (creator role, salt, dev-buy)', milestone: 'M4' },
   { signature: 'crank <token>', desc: 'collect idle pool fees', milestone: 'M4' },
   { signature: 'bid <token> <amount>', desc: 'fund a pool bid (flywheel inventory)', milestone: 'M4' }

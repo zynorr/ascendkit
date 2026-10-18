@@ -16,6 +16,7 @@ Real launchpad data, frozen. Every file was fetched from
 | `raw/creatortransferstarted.json` / `raw/creatortransferred.json` | 4 + 4 creator-transfer logs |
 | `raw/quoteconfigset.json` / `raw/pausedset.json` | 2 + 1 admin-configuration logs |
 | `raw/launchtx.json` | one raw `launch()` transaction (input + sender) for CREATE2 prediction tests |
+| `raw/fill-standing.json` | block-pinned state around both `Filled` events (launchpad getters, CL slot0 spot, vault balance, post-fill EMA/inventory) for the fill replay — fetched by `tools/fixtures/fetch-fill-standing.mjs` |
 | `pools.json` | decoded pools + meta (launchpad, poolManager, chainId, fetchedAtBlock) |
 
 ## Verified
@@ -25,3 +26,5 @@ Real launchpad data, frozen. Every file was fetched from
 - `Launched` topic0 = `0xa75ce47c3ff6fc75b5270d713acafcfb8149c5f91a73679d659fa90798ecfab4`; `Filled` topic0 = `0x25efae546c5990ebbaf93c759da1d06969fd980edbc411da1bb1d1786f29e328`.
 - Fee split model matches **all 19** `ProtocolFeesAllocated` logs to the wei (`packages/sim/src/fee.test.ts`, `packages/indexer/src/decode.test.ts`).
 - CREATE2 prediction from `raw/launchtx.json` reproduces the launched token exactly (`packages/core/src/create2.test.ts`).
+- Both `Filled` events replay through the fill simulator **to the wei** — absorbed tokens, fee, protocol legs, reserve/accumulation and the inventory debit — and the window pair reconstructs from the logs alone (`packages/sim/src/fill.test.ts`, `examples/04-simulate-fill.mjs`).
+- Tick math brackets the live `slot0` spot price between its reported tick and the next (`packages/core/src/tick.test.ts`).

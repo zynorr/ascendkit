@@ -19,7 +19,7 @@
     "test": "vitest run",
     "cli": "node packages/cli/dist/bin.js",
     "verify": "node tools/abi-extract/verify.js",
-    "demo": "node examples/01-predict-pool.mjs && node examples/02-track-pool.mjs"
+    "demo": "node examples/01-predict-pool.mjs && node examples/02-track-pool.mjs && node examples/04-simulate-fill.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.5.0",

@@ -6,6 +6,7 @@ import { registerDecode } from './commands/decode.js'
 import { registerFee } from './commands/fee.js'
 import { registerPool } from './commands/pool.js'
 import { registerPools } from './commands/pools.js'
+import { registerQuote } from './commands/quote.js'
 import { registerStubs } from './commands/stubs.js'
 import { registerWatch } from './commands/watch.js'
 
@@ -20,6 +21,7 @@ registerDecode(program)
 registerFee(program)
 registerPool(program)
 registerPools(program)
+registerQuote(program)
 registerStubs(program)
 registerWatch(program)
 
