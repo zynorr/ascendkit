@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "chainId": 99801,
+    "rpc": "https://testnet-rpc.elysium.kinetiq.xyz",
+    "launchpad": "0xc05193a68ED25df678bB7d6644D081BffDAA01D9",
+    "poolManager": "0x12e84206cb53ae0df055482ebc4658635096e1aa",
+    "vault": "0x2B738A9A69b7a45C9dA6B519f6bE6efBfb912aec",
+    "fetchedAtBlock": 10996064
+  },
+  "fills": [
+    {
+      "poolId": "0x973d69a48c4889e3038e9567293dc0af730e3954d6bd33a929f141744b2001b9",
+      "token": "0xb1527cca2bb132fea7bcff6fee49c2752ca0ebe8",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "quoteDecimals": 6,
+      "txHash": "0x294107cba759340b00819571c8a9baafd79ef39a3d556cceb6cb1b3a0e115169",
+      "logIndex": 11,
+      "blockNumber": 2461356,
+      "blockTimestamp": 1791081528,
+      "filled": {
+        "tokensIn": "421249506810392860350",
+        "feeTokens": "4212495068103928604",
+        "tokensBurned": "0",
+        "quotePaid": "3300"
+      },
+      "atPriorBlock": {
+        "blockNumber": 2461355,
+        "launchedAt": 1791081472,
+        "creator": "0x5090Dc1C2e4F926495c6D7519C768a5D6B0cE830",
+        "tokenIs0": false,
+        "startTick": -393800,
+        "currentFee": 10000,
+        "maxClip": "4000000000",
+        "bidInventory": "1000000",
+        "emaSqrtPrice": "28448090814676949786019000442468501326",
+        "emaUpdatedAt": 1791081472,
+        "spotSqrtPriceX96": "28164978861277996761606665821300094728",
+        "spotTick": 393799,
+        "vaultTokenBalance": "999998736251479568707253928"
+      },
+      "atFillBlock": {
+        "emaSqrtPrice": "28423922721094112332715508462612661739",
+        "bidInventory": "996700",
+        "emaUpdatedAt": 1791081528
+      }
+    },
+    {
+      "poolId": "0x973d69a48c4889e3038e9567293dc0af730e3954d6bd33a929f141744b2001b9",
+      "token": "0xb1527cca2bb132fea7bcff6fee49c2752ca0ebe8",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "quoteDecimals": 6,
+      "txHash": "0x870eda62c191f9c14457f906aa2332cc0a112a371c9b2481e208f54ba069fcef",
+      "logIndex": 11,
+      "blockNumber": 2461514,
+      "blockTimestamp": 1791081565,
+      "filled": {
+        "tokensIn": "315937130107794645262",
+        "feeTokens": "3159371301077946453",
+        "tokensBurned": "0",
+        "quotePaid": "2475"
+      },
+      "atPriorBlock": {
+        "blockNumber": 2461513,
+        "launchedAt": 1791081472,
+        "creator": "0x5090Dc1C2e4F926495c6D7519C768a5D6B0cE830",
+        "tokenIs0": false,
+        "startTick": -393800,
+        "currentFee": 10000,
+        "maxClip": "4000000000",
+        "bidInventory": "996700",
+        "emaSqrtPrice": "28423922721094112332715508462612661739",
+        "emaUpdatedAt": 1791081528,
+        "spotSqrtPriceX96": "28164978861277996761606665821300094728",
+        "spotTick": 393799,
+        "vaultTokenBalance": "999998736251479568707253928"
+      },
+      "atFillBlock": {
+        "emaSqrtPrice": "28408882025939958053074963442630613106",
+        "bidInventory": "994225",
+        "emaUpdatedAt": 1791081565
+      }
+    }
+  ]
+}

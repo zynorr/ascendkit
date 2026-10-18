@@ -8,4 +8,21 @@ export {
   type FeeStep,
   type ProtocolFeeSplit
 } from './fee.js'
-export { simulateFill, type FillSimInput, type FillSimResult } from './fill.js'
+export {
+  lessFee,
+  observeEma,
+  priceX96Of,
+  quoteFor,
+  simulateFill,
+  tokensFor,
+  windowStateBefore,
+  withinBand,
+  type FillDeclineReason,
+  type FillDeclined,
+  type FillFilled,
+  type FillLog,
+  type FillResult,
+  type FillStandingState,
+  type FillSwap,
+  type WindowState
+} from './fill.js'
