@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "chainId": 99801,
+    "rpc": "https://testnet-rpc.elysium.kinetiq.xyz",
+    "launchpad": "0xc05193a68ED25df678bB7d6644D081BffDAA01D9",
+    "poolManager": "0x12e84206cb53ae0df055482ebc4658635096e1aa",
+    "fetchedAtBlock": 10973152
+  },
+  "pools": [
+    {
+      "poolId": "0x360e5bda2e459de55bb65d7a1c72a5cd001244f4abe3056e3513ee8154b5cda8",
+      "token": "0x20c97309f0e1849d2403f97d56d619845c7b2253",
+      "creator": "0x5fa637713b819d6314e139291de2bfa7b7cd70eb",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "996795653846386727254550332",
+      "devBuyTokens": "3204346153553585156768573",
+      "blockNumber": 2435004,
+      "txHash": "0x91f35a45ae05d1a2e10e3202845275375bd93790d4d3d39def792a46eb1c8164"
+    },
+    {
+      "poolId": "0x64e0d3ecb8067abfca18f0de2431c6ed7696081f7b624d12d963e588b216440e",
+      "token": "0x24d3984cca238a53458fce92ba670fd2030e8bf8",
+      "creator": "0x1e28dfb3bb710a2c181b6a63276a7138569e7a4e",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "999873653038766684943522003",
+      "devBuyTokens": "126346961173627467796902",
+      "blockNumber": 2441004,
+      "txHash": "0x99c612049d1081bb240eb02376942054127d16826c27140f3df2040b53e9e059"
+    },
+    {
+      "poolId": "0xb8ae83a72804d3580b95a9b22960d72c6b24b7a6ec719e4d4eb2961dcc6eaffa",
+      "token": "0x8e185a6bd718b2a3d792418cf660abdf156d485f",
+      "creator": "0x5090dc1c2e4f926495c6d7519c768a5d6b0ce830",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "998739060286318424363076480",
+      "devBuyTokens": "1260939713621888048242425",
+      "blockNumber": 2441791,
+      "txHash": "0xa6bcdf5005b677d7c4fe69ba2218aa088d4492c2978b9fdb89cacbec6d4debe5"
+    },
+    {
+      "poolId": "0x67e4f5e1b26990402efa1b3da28c8c44355f4f6021ee91d662b955d6460d0e4c",
+      "token": "0xdbc9523df6ab8a7bad17e698994231c7560f4048",
+      "creator": "0x5090dc1c2e4f926495c6d7519c768a5d6b0ce830",
+      "quote": "0xbb98f64dc031c04e425ff20c6c98e14f01f0541a",
+      "supplySeeded": "997237430674388751932516168",
+      "devBuyTokens": "2762569325611248067480390",
+      "blockNumber": 2459636,
+      "txHash": "0x3aaa843f5206d85e6b8d969e4eaeb033e002935e9196616d8a62f87175cb2bad"
+    },
+    {
+      "poolId": "0x973d69a48c4889e3038e9567293dc0af730e3954d6bd33a929f141744b2001b9",
+      "token": "0xb1527cca2bb132fea7bcff6fee49c2752ca0ebe8",
+      "creator": "0x5090dc1c2e4f926495c6d7519c768a5d6b0ce830",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "999998736251479568707253928",
+      "devBuyTokens": "1263748520431178581051",
+      "blockNumber": 2461121,
+      "txHash": "0xfb6830c6930221de95162cace05689f13cf5928c08da80d86f81a7bcbc1bcbdc"
+    },
+    {
+      "poolId": "0xe30c31071c9c1eb3011161aa085c8e46102dfacafe85c2be90aa269540afce1b",
+      "token": "0x5ab6aaf49a8b4d57fe1b2aedcfd6383635aa21ae",
+      "creator": "0x5090dc1c2e4f926495c6d7519c768a5d6b0ce830",
+      "quote": "0xbb98f64dc031c04e425ff20c6c98e14f01f0541a",
+      "supplySeeded": "997237430674388751932497764",
+      "devBuyTokens": "2762569325611248067480360",
+      "blockNumber": 2462373,
+      "txHash": "0x9b63ac1e577f9fa0f58e537caf812e0dc3759e247f6eadb78517f92aca2d16ac"
+    },
+    {
+      "poolId": "0xaa0a7a3e7d4e5efd05fa9517c4589a40983378c9699f19fa0c45a694404f5b88",
+      "token": "0x829707b2f281dbbd7577b7e09c45d3f428a0110c",
+      "creator": "0x1e28dfb3bb710a2c181b6a63276a7138569e7a4e",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "996795653846386727254550332",
+      "devBuyTokens": "3204346153553585156768573",
+      "blockNumber": 2463088,
+      "txHash": "0x053d41f592320bdcb0d7370a20fbbdb3867358014ce7b83f119fe88b53e636f3"
+    },
+    {
+      "poolId": "0x4c87805e0ad1135ee3c2762ff63beee6af6ebec07bd24656455f117241bafe58",
+      "token": "0xa9ebe95aa7fa9d8eea551e562c5cb05d1fe66e6b",
+      "creator": "0x5090dc1c2e4f926495c6d7519c768a5d6b0ce830",
+      "quote": "0xa0d2293cd2c5fa2447f16c3146cf998fe35af649",
+      "supplySeeded": "998739060286378111436875476",
+      "devBuyTokens": "1260939713621888448959503",
+      "blockNumber": 2469614,
+      "txHash": "0x6cbf4c10c70977b4c7e7f16561f6cc17ce69bdba899a064c463c53dd482ed4e5"
+    }
+  ]
+}
